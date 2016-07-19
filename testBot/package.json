@@ -26,6 +26,7 @@
   },
   "scripts": {
     "pretest": "jscs ./lib/",
+    "notify": "",
     "test": "mocha tests/*.js"
   },
   "repository": {

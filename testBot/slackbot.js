@@ -85,7 +85,7 @@ var responses = ["http://www.vanityfair.com/hollywood/2016/07/jimmy-fallon-arian
 var count = [0,0];
 var index;
 
-     controller.hears(keywords, 'direct_message,direct_mention,mention,ambient', function(bot, message) {
+     controller.hears(keywords, 'ambient', function(bot, message) {
 
         controller.storage.users.get(message.user, function(err, user) {
 
@@ -100,11 +100,12 @@ var index;
                     console.log("C:" +count);
                     if (user && user.name) {
                         bot.reply(message, 'Hello ' + user.name + '!!');
-                    } else if (count[index] == 2){
+                    } else if (count[index] == 4){
                          //     // var a = 100;
                         console.log(index);
                         setTimeout(function () {
                             bot.reply(message, responses[index]);
+                            bot.reply(message, "DOUBLE");
                             count[index] = 0;
                         }, 3000);
                     //     console.log(count);
