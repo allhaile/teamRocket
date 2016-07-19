@@ -26,7 +26,7 @@
   },
   "scripts": {
     "pretest": "jscs ./lib/",
-    "notify": "",
+    "notify": "node slackbot.js",
     "test": "mocha tests/*.js"
   },
   "repository": {
